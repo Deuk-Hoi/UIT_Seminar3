@@ -1,0 +1,28 @@
+#title{
+    text-align: center;
+    font: bold 30pt '경기천년제목';
+}
+table td{
+    text-align: center;
+    padding-right: 10px;
+    font:bold 12pt '맑은 고딕';
+}
+table{
+    margin: 0 auto;
+}
+form{
+    margin-top: 30px;
+}
+#Privacy{
+    text-align: center;
+}
+#submit{
+    
+    margin: auto;
+    width: 30%;
+}
+#submit input{
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+}

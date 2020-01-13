@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript7</title>
+</head>
+<body>
+    <input type='button' value="이벤트 처리" onclick="test4()"/>
+    <div id='hello'>id-div</div>
+    <div class ='world'>class-div</div>
+    <span class ='world'>class-span</div>
+</body>
+</html>
+
+<script>
+
+    function test4()
+    {
+        const idval = document.getElementById('hello');
+        const classval = document.getElementsByClassName('world');
+
+        console.log(idval);
+        idval.style.color='red';
+
+        for(let i=0;i<classval.length;i++)
+        {
+            classval[i].style.color='blue';
+            console.log(classval[i]);
+        }
+    }
+    
+</script>

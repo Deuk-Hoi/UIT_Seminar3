@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript9</title>
+</head>
+<body>
+    <h3>약관 동의하기</h3>
+    1번(필수) : <input type="checkbox" name="mycheck"/><br>
+    2번(필수) : <input type="checkbox" name="mycheck"/><br>
+    3번(필수) : <input type="checkbox" name="mycheck"/><br><br>
+    4번(선택) : <input type="checkbox" name="mycheck" value="4"/><br>
+    5번(선택) : <input type="checkbox" name="mycheck" value="5"/><br>
+
+    <input type='button' value="모두 동의하기" onclick="checkall()"/>
+    <input type='button' value='다음으로' onclick="next()"/>
+    <div id='result'>선택)번을 체크하였습니다.</div>
+    
+</body>
+</html>
+
+<script>
+    const Mycheck = document.getElementsByName('mycheck');
+
+    function checkall()
+    {
+        for(let i=0;i<Mycheck.length;i++)
+        {
+            Mycheck[i].checked = true;
+        }
+    }
+
+    function next()
+    {
+        let i = "";
+        for(let i = 0; i< Mycheck.length;i++)
+        {
+            if(i<3)
+            {
+                if(!Mycheck[i].checked)
+                {
+                    alert('모든 필수 항목에 체크하시오');
+                    break;
+                }
+            }
+            else{
+                if(Mycheck[i].checked){
+                    i += " "+Mychecked[i].value;
+                }
+                document.getElementById("result").innerHTML=i;
+            }
+        }
+    }
+    
+</script>

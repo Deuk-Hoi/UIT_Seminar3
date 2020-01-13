@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript8</title>
+</head>
+<body>
+    <form name='myform'>
+        아이디: <input type='text' name='id'/><br>
+        비밀번호: <input type='password' name='pw'/>
+        <input type='button' value="check all" onclick="test5()"/>
+
+        <h3>결과값</h3>
+        <div id="checkid"></div>
+        <div id="checkpw"></div>
+    </form>
+</body>
+</html>
+
+<script>
+    function test5()
+    {
+        ID = document.myform.id.value;
+        Pass = document.myform.pw.value;
+        console.log(ID);
+
+        document.getElementById("checkid").innerHTML="ID : "+ID;
+        document.getElementById("checkpw").innerHTML="PW : "+Pass;   
+    }
+</script>
